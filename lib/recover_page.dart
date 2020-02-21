@@ -14,6 +14,7 @@ class _RecoverPageState extends State<RecoverPage> {
   final _formKey = GlobalKey<FormState>();
   final _user = 'student';
   final _password = '12345';
+  String name;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +82,7 @@ class _RecoverPageState extends State<RecoverPage> {
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Enter Your Name';
-                      }
+                      } else{name=value;}
                     },
                   ),
                 ),
@@ -99,13 +100,9 @@ class _RecoverPageState extends State<RecoverPage> {
                         context: context,
                         builder: (BuildContext context) {
                           return AlertDialog(
-                            title: new Text('Size'),
-                            content: Column(
-                              children: <Widget>[
-                                Text('User Name: $_user'),
-                                Text('Password: $_password'),
-                              ],
-                            ),
+                            title: new Text('Hi, $name'),
+                            content: new Text(
+                                'User Name: $_user \n\nPassword: $_password'),
                             actions: <Widget>[
                               new MaterialButton(
                                 onPressed: () {

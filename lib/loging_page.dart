@@ -63,6 +63,7 @@ class _LogingPageState extends State<LogingPage> {
 
                       // hintText: "User Id",
                       labelText: "User Name",
+                      icon: Icon(Icons.supervised_user_circle),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -86,6 +87,7 @@ class _LogingPageState extends State<LogingPage> {
                     decoration: InputDecoration(
                       // hintText: "User Id",
                       labelText: "Password",
+                      icon: Icon(Icons.lock_outline),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -101,28 +103,28 @@ class _LogingPageState extends State<LogingPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10.0, left: 30.0),
+                padding: const EdgeInsets.only(top: 10.0, left: 45.0),
                 child: Row(
                   children: <Widget>[
-                    Icon(
-                      Icons.live_help,
-                      size: 28,
-                    ),
                     // Text(
                     //   'Remember Me',
                     //   style: TextStyle(fontSize: 20),
                     // ),
                     FlatButton(
-                      child:Text(
-                      'Remember Me',
-                      style: TextStyle(fontSize: 20),
+                      child: Text(
+                        'Forgotten',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RecoverPage()));
+                      },
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => RecoverPage()));
-                    },
+                    Icon(
+                      Icons.live_help,
+                      size: 28,
                     ),
                   ],
                 ),

@@ -13,13 +13,13 @@ class LogingPage extends StatefulWidget {
 
 class _LogingPageState extends State<LogingPage> {
   final _formKey = GlobalKey<FormState>();
-  final _user='student';
-  final _password='12345';
+  final _user = 'student';
+  final _password = '12345';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.amberAccent,
-      
+
       body: Center(
         child: Form(
           key: _formKey,
@@ -66,10 +66,10 @@ class _LogingPageState extends State<LogingPage> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    validator: (value){
-                      if(value.isEmpty){
+                    validator: (value) {
+                      if (value.isEmpty) {
                         return 'user name is empty';
-                      }else if(value!=_user){
+                      } else if (value != _user) {
                         return 'Incorrect User Id';
                       }
                     },
@@ -81,6 +81,7 @@ class _LogingPageState extends State<LogingPage> {
                     const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
                 child: Container(
                   child: TextFormField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       // hintText: "User Id",
                       labelText: "Password",
@@ -88,10 +89,10 @@ class _LogingPageState extends State<LogingPage> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    validator: (value){
-                      if(value.isEmpty){
+                    validator: (value) {
+                      if (value.isEmpty) {
                         return 'Password is empty';
-                      }else if(value!=_password){
+                      } else if (value != _password) {
                         return 'Incorrect Password';
                       }
                     },
@@ -114,17 +115,24 @@ class _LogingPageState extends State<LogingPage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal:80.0,vertical: 10.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 80.0, vertical: 10.0),
                 child: RaisedButton(
                   elevation: 10,
                   color: Colors.orange,
                   onPressed: () {
-                    if(_formKey.currentState.validate()){
+                    if (_formKey.currentState.validate()) {
                       print("Login Successful");
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LandingPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => LandingPage()));
                     }
                   },
-                  child: Text('Login',style: TextStyle(fontSize: 20),),
+                  child: Text(
+                    'Login',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
               ),
             ],

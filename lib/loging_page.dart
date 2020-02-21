@@ -5,6 +5,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:loging_page/landing_page.dart';
+import 'package:loging_page/recover_page.dart';
 
 class LogingPage extends StatefulWidget {
   @override
@@ -107,9 +108,21 @@ class _LogingPageState extends State<LogingPage> {
                       Icons.live_help,
                       size: 28,
                     ),
-                    Text(
+                    // Text(
+                    //   'Remember Me',
+                    //   style: TextStyle(fontSize: 20),
+                    // ),
+                    FlatButton(
+                      child:Text(
                       'Remember Me',
                       style: TextStyle(fontSize: 20),
+                    ),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RecoverPage()));
+                    },
                     ),
                   ],
                 ),

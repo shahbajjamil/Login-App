@@ -106,20 +106,13 @@ class _LogingPageState extends State<LogingPage> {
                 padding: const EdgeInsets.only(top: 10.0, left: 45.0),
                 child: Row(
                   children: <Widget>[
-                    // Text(
-                    //   'Remember Me',
-                    //   style: TextStyle(fontSize: 20),
-                    // ),
                     FlatButton(
                       child: Text(
                         'Forgotten',
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => RecoverPage()));
+                        Navigator.of(context).pushNamed('/RecoverPage');
                       },
                     ),
                     Icon(
@@ -138,10 +131,8 @@ class _LogingPageState extends State<LogingPage> {
                   onPressed: () {
                     if (_formKey.currentState.validate()) {
                       print("Login Successful");
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LandingPage()));
+
+                      Navigator.of(context).pushNamed('/LandingPage');
                     }
                   },
                   child: Text(

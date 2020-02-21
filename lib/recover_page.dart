@@ -5,6 +5,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:loging_page/loging_page.dart';
+
 class RecoverPage extends StatefulWidget {
   @override
   _RecoverPageState createState() => _RecoverPageState();
@@ -31,8 +33,6 @@ class _RecoverPageState extends State<RecoverPage> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Container(
-                  // color: Colors.orange,
-                  // width: double.infinity,
                   child: Text.rich(
                     TextSpan(
                       children: [
@@ -82,7 +82,9 @@ class _RecoverPageState extends State<RecoverPage> {
                     validator: (value) {
                       if (value.isEmpty) {
                         return 'Enter Your Name';
-                      } else{name=value;}
+                      } else {
+                        name = value;
+                      }
                     },
                   ),
                 ),
@@ -106,7 +108,9 @@ class _RecoverPageState extends State<RecoverPage> {
                             actions: <Widget>[
                               new MaterialButton(
                                 onPressed: () {
-                                  Navigator.of(context).pop(context);
+                                  Navigator.of(context).pushNamedAndRemoveUntil(
+                                      '/LogingPage',
+                                      (Route<dynamic> route) => false);
                                 },
                                 child: new Text('Close'),
                               ),

@@ -92,7 +92,7 @@ class _RecoverPageState extends State<RecoverPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 100),
                 child: RaisedButton.icon(
-                  color: Theme.of(context).accentColor,
+                  color: Colors.yellow,
                   elevation: 10.0,
                   onPressed: () {
                     if (_formKey.currentState.validate()) {

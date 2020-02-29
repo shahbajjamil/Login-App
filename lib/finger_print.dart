@@ -36,16 +36,18 @@ class _FingerPrintAuthState extends State<FingerPrintAuth> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-              icon: Icon(
-                Icons.fingerprint,
-                // size:30,
-                color: Colors.cyan,
-              ),
-              onPressed: _authorizeNow,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: IconButton(
+        iconSize: 70,
+        icon: Icon(
+          Icons.fingerprint,
+          color: Colors.cyan,
+        ),
+        onPressed: _authorizeNow,
+      ),
     );
   }
 }

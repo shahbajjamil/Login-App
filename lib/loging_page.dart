@@ -49,10 +49,12 @@ class _LogingPageState extends State<LogingPage> {
                 ),
               ),
               Container(
-                height: 200,
-                width: 200,
+                height: 100,
+                width: 100,
                 child: Image.network(
-                    'https://www.pngjoy.com/pngm/377/6992063_chef-silhouette-empty-profile-picture-female-transparent-png.png'),
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbAfM1cGXywOuap2AYi3mPRwuLx1pBOxoMHZjRsa-GorQwOyDu',
+                  // fit: BoxFit.cover,
+                ),
               ),
               Padding(
                 padding:
@@ -120,7 +122,6 @@ class _LogingPageState extends State<LogingPage> {
                       Icons.live_help,
                       size: 28,
                     ),
-                    FingerPrintAuth(),
                   ],
                 ),
               ),
@@ -142,6 +143,11 @@ class _LogingPageState extends State<LogingPage> {
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
+              ),
+              FingerPrintAuth(),
+              Text(
+                'Tap for Fingerprint Verification',
+                textAlign: TextAlign.center,
               ),
             ],
           ),

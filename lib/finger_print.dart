@@ -1,3 +1,8 @@
+/**
+ * Author: Shahbaj Jamil
+ *profile: https://github.com/shahbajjamil
+  */
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:local_auth/local_auth.dart';
@@ -29,7 +34,6 @@ class _FingerPrintAuthState extends State<FingerPrintAuth> {
       if (isAuthorized) {
         _authorizedOrNot = "Authorized";
         Navigator.of(context).pushNamed('/LandingPage');
-        // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyPage()));
       } else {
         _authorizedOrNot = "Not Authorized";
       }

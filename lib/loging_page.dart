@@ -6,6 +6,7 @@
 import 'package:flutter/material.dart';
 import 'package:loging_page/landing_page.dart';
 import 'package:loging_page/recover_page.dart';
+import 'finger_print.dart';
 
 class LogingPage extends StatefulWidget {
   @override
@@ -119,6 +120,7 @@ class _LogingPageState extends State<LogingPage> {
                       Icons.live_help,
                       size: 28,
                     ),
+                    FingerPrintAuth(),
                   ],
                 ),
               ),

@@ -28,6 +28,7 @@ class _FingerPrintAuthState extends State<FingerPrintAuth> {
     setState(() {
       if (isAuthorized) {
         _authorizedOrNot = "Authorized";
+        Navigator.of(context).pushNamed('/LandingPage');
         // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MyPage()));
       } else {
         _authorizedOrNot = "Not Authorized";
@@ -38,8 +39,13 @@ class _FingerPrintAuthState extends State<FingerPrintAuth> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return IconButton(
+              icon: Icon(
+                Icons.fingerprint,
+                // size:30,
+                color: Colors.cyan,
+              ),
+              onPressed: _authorizeNow,
     );
   }
 }

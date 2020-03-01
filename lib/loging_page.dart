@@ -40,25 +40,23 @@ class _LogingPageState extends State<LogingPage> {
               key: _formKey,
               child: ListView(
                 children: <Widget>[
-                  // SizedBox(height: 50,),
                   Container(
+                    alignment: Alignment.center,
                     height: 100,
-                    // color: Colors.yellow,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'USER',
-                          style: TextStyle(fontSize: 40, color: Colors.orange),
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        Text(
-                          'LOGIN',
-                          style: TextStyle(fontSize: 40, color: Colors.white),
-                        ),
-                      ],
+                    child: Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'USER ',
+                            style:
+                                TextStyle(fontSize: 40, color: Colors.orange),
+                          ),
+                          TextSpan(
+                            text: 'LOGIN',
+                            style: TextStyle(fontSize: 40, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(

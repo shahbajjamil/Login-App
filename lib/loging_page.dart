@@ -151,7 +151,7 @@ class _LogingPageState extends State<LogingPage> {
                         if (_formKey.currentState.validate()) {
                           print("Login Successful");
 
-                          Navigator.of(context).pushNamed('/LandingPage');
+                          Navigator.of(context).pushNamed('/MyProfile');
                         }
                       },
                       child: Text(

@@ -33,7 +33,7 @@ class _FingerPrintAuthState extends State<FingerPrintAuth> {
     setState(() {
       if (isAuthorized) {
         _authorizedOrNot = "Authorized";
-        Navigator.of(context).pushNamed('/LandingPage');
+        Navigator.of(context).pushNamed('/MyProfile');
       } else {
         _authorizedOrNot = "Not Authorized";
       }

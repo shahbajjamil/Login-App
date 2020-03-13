@@ -5,8 +5,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:loging_page/loging_page.dart';
-
 class RecoverPage extends StatefulWidget {
   @override
   _RecoverPageState createState() => _RecoverPageState();

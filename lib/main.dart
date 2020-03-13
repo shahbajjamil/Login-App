@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.yellow,
-        accentColor: Colors.white,
+        accentColor: Colors.blue,
       ),
       home: LogingPage(),
       routes: <String, WidgetBuilder>{

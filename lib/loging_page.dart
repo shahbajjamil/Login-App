@@ -4,8 +4,6 @@
   */
 
 import 'package:flutter/material.dart';
-import 'package:loging_page/landing_page.dart';
-import 'package:loging_page/recover_page.dart';
 import 'finger_print.dart';
 
 class LogingPage extends StatefulWidget {
